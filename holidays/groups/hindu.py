@@ -317,3 +317,19 @@ class HinduCalendarHolidays(EasternCalendarHolidays):
         return self._add_hindu_calendar_holiday(
             name, self._hindu_calendar.vaisakhi_date(self._year)
         )
+    def _add_rath_yatra(self, name) -> Optional[date]:
+        """
+        Add Rath Yatra.
+
+        Ratha Yatra or chariot festival, is any public procession in a chariot.
+        They are held annually during festivals in India, Nepal, and Sri Lanka.
+        The term also refers to the popular annual Ratha Yatra of Puri
+        that involves a public procession with a chariot with deities Jagannath (Vishnu avatar),
+        Balabhadra (his brother), Subhadra (his sister)
+        and Sudarshana Chakra (his weapon) on a ratha.
+        https://en.wikipedia.org/wiki/Ratha_Yatra
+        """
+        return self._add_hindu_calender_holiday(
+            name, self._hindu_calender.rath_yatra_date(self.year)
+        )
+        
